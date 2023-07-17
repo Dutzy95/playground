@@ -6,10 +6,9 @@ on:
     branches: [ main ]
     
 jobs:
-  # Install and run a PostgresDB
-  container-job:
-    # Containers must run in Linux based operating systems
+  build:
     runs-on: ubuntu-latest
+    
     # Docker Hub image that `container-job` executes in
     container: node:10.18-jessie
 
@@ -28,8 +27,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-  build:
-    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout main branch from GitHub
