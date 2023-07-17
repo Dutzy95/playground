@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: ${active.profile}
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
@@ -11,5 +13,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-  profiles:
-    active: ${active.profile}
