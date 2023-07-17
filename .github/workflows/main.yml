@@ -28,6 +28,9 @@ jobs:
         ports:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
+    steps:
+      - name: Checkout main branch from GitHub
+        uses: actions/checkout@v2
           
   build:
     runs-on: ubuntu-latest
