@@ -1,5 +1,7 @@
 package com.bcv.playground.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.bcv.playground.repository.PersonRepository;
@@ -16,5 +18,9 @@ public class PersonService {
 	
 	public Person savePerson(Person person) {
 		return personRepository.save(person);
+	}
+	
+	public List<Person> getPersonsByLastName(String lastName) {
+		return personRepository.findByLastName(lastName);
 	}
 }
