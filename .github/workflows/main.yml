@@ -30,10 +30,10 @@ jobs:
         run: mvn compile
         
       - name: Run Maven clean install
-        run: mvn clean install -Dactive.profile=ci
+        run: mvn clean install
           
       - name: Build Maven Project
-        run: mvn -B package --file pom.xml -Dactive.profile=ci
+        run: mvn -B package --file pom.xml
         
   
       
