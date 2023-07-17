@@ -6,8 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PlaygroundApplication {
 
-	private static String sBla = "bla";
-
 	public static void main(String[] args) {
 		SpringApplication.run(PlaygroundApplication.class, args);
 	}
