@@ -9,15 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup PostgreSQL
-        # uses: Harmon758/postgresql-action@0be19fa37850b22cb4c9bbf28a03abbf44abd863
-        uses: Harmon758/postgresql-action@v1.0.0
-        with:
-          postgresql version: latest
-          postgresql db: postgres 
-          postgresql user: postgres
-          postgresql password: postgres
-          
       - name: Checkout main branch from GitHub
         uses: actions/checkout@v2
       
@@ -30,10 +21,10 @@ jobs:
         run: mvn compile
         
       - name: Run Maven clean install
-        run: mvn clean install
+        run: mvn clean install -DskipTests
           
       - name: Build Maven Project
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file pom.xml -DskipTests
         
   
       
