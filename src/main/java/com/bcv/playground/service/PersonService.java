@@ -23,4 +23,8 @@ public class PersonService {
 	public List<Person> getPersonsByLastName(String lastName) {
 		return personRepository.findByLastName(lastName);
 	}
+	
+	public List<Person> getAllPersons() {
+		return (List<Person>) personRepository.findAll();
+	}
 }
